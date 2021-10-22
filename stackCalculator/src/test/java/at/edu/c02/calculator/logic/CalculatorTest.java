@@ -13,8 +13,8 @@ import at.edu.c02.calculator.logic.CalculatorImpl;
 public class CalculatorTest {
 
 	@Test
-	public void testSimpleAddOperation() throws Exception {
-
+	public void testSimpleAddOperation() throws Exception
+	{
 		//setup
 		Calculator calc = new CalculatorImpl();
 		
@@ -25,25 +25,22 @@ public class CalculatorTest {
 
 		//verify
 		assertEquals(5, result, 0);
-		
-
 	}
 	
 	@Test
-	public void testSimpleMulOperation() throws Exception {
-
+	public void testSimpleMulOperation() throws Exception
+	{
 		Calculator calc = new CalculatorImpl();
 		calc.push(2.0);
 		calc.push(3);
 		double result = calc.perform(Operation.mul);
 
 		assertEquals(6, result, 0);
-
 	}
 	
 	@Test
-	public void testSimpleDivOperation() throws Exception {
-
+	public void testSimpleDivOperation() throws Exception
+	{
 		Calculator calc = new CalculatorImpl();
 		calc.push(6.0);
 		calc.push(2);
