@@ -10,16 +10,17 @@ import at.edu.c02.calculator.Calculator;
 import at.edu.c02.calculator.Calculator.Operation;
 import at.edu.c02.calculator.parser.Parser;
 
-public class ParserTest {
-
+public class ParserTest
+{
 	@Test(expected = IllegalArgumentException.class)
-	public void testNullParser() {
+	public void testNullParser()
+	{
 		new Parser(null);
 	}
 
 	@Test(expected = FileNotFoundException.class)
-	public void testParserInvalidFile() throws Exception {
-
+	public void testParserInvalidFile() throws Exception
+	{
 		Calculator cal = mock(Calculator.class);
 
 		Parser parser = new Parser(cal);
@@ -27,8 +28,8 @@ public class ParserTest {
 	}
 
 	@Test
-	public void testParserTest01Xml() throws Exception {
-
+	public void testParserTest01Xml() throws Exception
+	{
 		Calculator cal = mock(Calculator.class);
 
 		Parser parser = new Parser(cal);

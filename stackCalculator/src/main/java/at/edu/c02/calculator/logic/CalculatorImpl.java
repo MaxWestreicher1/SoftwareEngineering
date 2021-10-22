@@ -6,8 +6,8 @@ import at.edu.c02.calculator.Calculator;
 import at.edu.c02.calculator.CalculatorException;
 
 
-public class CalculatorImpl implements Calculator {
-
+public class CalculatorImpl implements Calculator
+{
 	private Stack<Double> stack_ = new Stack<Double>();
 
 	@Override

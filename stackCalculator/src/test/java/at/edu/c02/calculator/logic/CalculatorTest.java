@@ -10,8 +10,8 @@ import at.edu.c02.calculator.CalculatorException;
 import at.edu.c02.calculator.Calculator.Operation;
 import at.edu.c02.calculator.logic.CalculatorImpl;
 
-public class CalculatorTest {
-
+public class CalculatorTest
+{
 	@Test
 	public void testSimpleAddOperation() throws Exception
 	{
@@ -47,25 +47,19 @@ public class CalculatorTest {
 		double result = calc.perform(Operation.div);
 
 		assertEquals(3, result, 0);
-
 	}
-	
-	
-	
-	
 
 	//
 	@Test(expected = CalculatorException.class)
-	public void testPopOnEmptyStack() throws Exception {
-
+	public void testPopOnEmptyStack() throws Exception
+	{
 		Calculator calc = new CalculatorImpl();
 		calc.pop();
-
 	}
 
 	@Test
-	public void testDivisionByZero() throws Exception {
-
+	public void testDivisionByZero() throws Exception
+	{
 		//Setup
 		Calculator calc = new CalculatorImpl();
 		try {
@@ -76,11 +70,12 @@ public class CalculatorTest {
 			fail("Exception expected");
 			
 
-		} catch (CalculatorException e) {
+		}
+		catch (CalculatorException e)
+		{
 			assertEquals("Division by zero", e.getMessage());
 			// e.getCause()
 		}
-
 	}
 
 
@@ -101,8 +96,8 @@ public class CalculatorTest {
 			result = calc.perform(Operation.mod);
 
 			assertEquals(1, result, 0);
-
-		} catch (Exception e)
+		}
+		catch (Exception e)
 		{
 			assertEquals("Fehler", e.getMessage());
 		}
